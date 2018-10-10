@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Full screen Instagram video",
+  "description": "Full screen Instagram video",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "https://www.instagram.com/*"
+  ],
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+  },
+  "content_scripts": [{
+    "js": ["jquery.colorbox-min.js", "background.js"],
+    "matches": ["https://www.instagram.com/*"]
+  }]
+}
